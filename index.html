@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet"href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" />
+  </head>
+  <body class="container" style="background-color: #DEDEDE;">
+    <main class="row d-flex">
+    <section class="card card-body mt-5 col-2">
+      <h1>Listagem de Clientes</h1>
+      <hr>
+      <!-- Botão da aba - Listar -->
+
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <input
+            class="nav-link active"
+            id="customer-list-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#customer-list"
+            type="button"
+            role="tab"
+            aria-controls="customer-list"
+            aria-selected="true"
+            type="button"
+            value="Listar Clientes">
+          </input>
+        </li>
+
+        <!-- Botão da aba - Add -->
+        <li class="nav-item" role="presentation">
+          <input
+            class="nav-link"
+            id="customer-add-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#customer-add"
+            type="button"
+            role="tab"
+            aria-controls="customer-add"
+            aria-selected="false"
+            type="button"
+            value="Novo Cliente">
+          </input>
+
+        </li> 
+
+        
+      </ul>
+            
+    
+
+      <div class="tab-content" id="myTabContent">
+        <!-- Conteúdo da Listagem executando a função da listagem -->
+        <div class="tab-pane fade show active" id="customer-list" role="tabpanel" aria-labelledby="list-tab" data-content="listCustomers"></div>
+
+        <!-- Conteúdo da adição dos dados dos clientes executando a função da adição -->
+        <div class="tab-pane fade mb-3" id="customer-add" role="tabpanel" aria-labelledby="add-tab" 
+        data-content="addCustomer">
+        </div>
+       
+      </div>
+    </section>
+  </main>
+
+
+
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/pages/addCustomer.js"></script>
+    <script src="js/pages/listCustomers.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
